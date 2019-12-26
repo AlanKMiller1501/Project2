@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "Turkey12!",
+    "password": "Mylife89!",
     "database": "sequelize_beers",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "Mylife89!",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",

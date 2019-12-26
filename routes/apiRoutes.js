@@ -17,7 +17,9 @@ module.exports = function(app) {
 
   // Delete an example by id
   app.delete("/api/members/:id", function(req, res) {
-    db.Member.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
+    db.Member.destroy({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
       res.json(dbExample);
     });
   });

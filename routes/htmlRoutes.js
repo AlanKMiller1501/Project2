@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 var db = require("../models");
 
 module.exports = function(app) {
@@ -21,6 +22,7 @@ module.exports = function(app) {
   });
 
   app.get("/members/:id", function(req, res) {
+    // eslint-disable-next-line prettier/prettier
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
       res.render("post", {
         example: dbExample
