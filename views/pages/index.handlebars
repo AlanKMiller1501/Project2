@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+
+
+<a href="/add">Add Beers</a>
+
+{{#each beers}}
+<div>
+    <h5>{{name}}</h5>
+    <p>{{description}}</p>
+
+    {{#each ratings}}
+    {{userRating}}
+    {{/each}}
+    {{totalRating}}
+
+    <form action="/api/rate" method="post">
+        <input type="hidden" name="beerId" value="{{id}}">
+        <label for="rating">Rating: </label>
+        <select name="userRating" id="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br>
+        <input type="submit" value="Rate!">
+    </form>
+</div>
+{{/each}}
